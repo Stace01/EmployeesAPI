@@ -44,13 +44,10 @@
 
 1. Core: 
 Делится на два подуровня:
-
 1.1 API: ASP.NET (Enterprise-логика может использоваться в разных приложениях)
 2.2 Application: Бизнес логика приложения.
-
 2. Infrastructure: База данных полностью настроена на этом уровне.
-3. 
-4. Presentation: web API with ASP.NET Core.
+3. Presentation: web API with ASP.NET Core.
 
 
 Уровни Infrastructure и Presentation:  зависят от Core.
