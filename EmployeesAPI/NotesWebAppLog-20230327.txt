@@ -1,0 +1,262 @@
+2023-03-27 16:47:46.943 +00:00 [INF] Executed DbCommand (140ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2023-03-27 16:47:47.191 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Employees" (
+    "Id1" TEXT NOT NULL CONSTRAINT "PK_Employees" PRIMARY KEY,
+    "Id" TEXT NOT NULL,
+    "ФИО сотрудника" TEXT NOT NULL,
+    "Должность" TEXT NOT NULL,
+    "CreatedDateTime" TEXT NOT NULL,
+    "UpdatedDateTime" TEXT NULL
+);
+2023-03-27 16:47:47.199 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Employees_Id" ON "Employees" ("Id");
+2023-03-27 16:47:47.329 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2023-03-27 16:47:47.329 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-03-27 16:47:47.366 +00:00 [INF] Creating key {4f1dbb14-cbbf-44bf-92e7-018720f830ff} with creation date 2023-03-27 16:47:47Z, activation date 2023-03-27 16:47:47Z, and expiration date 2023-06-25 16:47:47Z.
+2023-03-27 16:47:47.403 +00:00 [WRN] No XML encryptor configured. Key {4f1dbb14-cbbf-44bf-92e7-018720f830ff} may be persisted to storage in unencrypted form.
+2023-03-27 16:47:47.409 +00:00 [INF] Writing data to file '/root/.aspnet/DataProtection-Keys/key-4f1dbb14-cbbf-44bf-92e7-018720f830ff.xml'.
+2023-03-27 16:47:47.726 +00:00 [INF] 'Configure' step is done! Ready to go!
+2023-03-27 16:47:48.149 +00:00 [INF] Now listening on: https://[::]:443
+2023-03-27 16:47:48.150 +00:00 [INF] Now listening on: http://[::]:80
+2023-03-27 16:47:48.154 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-27 16:47:48.155 +00:00 [INF] Hosting environment: Development
+2023-03-27 16:47:48.156 +00:00 [INF] Content root path: /app
+2023-03-27 16:48:13.813 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger - -
+2023-03-27 16:48:13.869 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+System.UriFormatException: Invalid URI: The format of the URI could not be determined.
+   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind, UriCreationOptions& creationOptions)
+   at System.Uri..ctor(String uriString)
+   at EmployeesAPI.Presentation.ConfigureSwaggerOptions.Configure(SwaggerGenOptions options) in E:\Training\C#\Speed5\EmployeesAPI\EmployeesAPI\Presentation\ConfigureSwaggerOptions.cs:line 21
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Swashbuckle.AspNetCore.SwaggerGen.ConfigureSwaggerGeneratorOptions..ctor(IOptions`1 swaggerGenOptionsAccessor, IServiceProvider serviceProvider, IWebHostEnvironment hostingEnv)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitNoCache(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.SwaggerGenServiceCollectionExtensions.<>c.<AddSwaggerGen>b__0_1(IServiceProvider s)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.GetService(IServiceProvider sp, Type type, Type middleware)
+   at lambda_method4(Closure , Object , HttpContext , IServiceProvider )
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_1.<UseMiddleware>b__2(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-03-27 16:48:14.047 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger - - - 500 - text/html;+charset=utf-8 237.5329ms
+2023-03-27 16:48:14.367 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/favicon.ico - -
+2023-03-27 16:48:14.398 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+System.UriFormatException: Invalid URI: The format of the URI could not be determined.
+   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind, UriCreationOptions& creationOptions)
+   at System.Uri..ctor(String uriString)
+   at EmployeesAPI.Presentation.ConfigureSwaggerOptions.Configure(SwaggerGenOptions options) in E:\Training\C#\Speed5\EmployeesAPI\EmployeesAPI\Presentation\ConfigureSwaggerOptions.cs:line 21
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Swashbuckle.AspNetCore.SwaggerGen.ConfigureSwaggerGeneratorOptions..ctor(IOptions`1 swaggerGenOptionsAccessor, IServiceProvider serviceProvider, IWebHostEnvironment hostingEnv)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitNoCache(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.SwaggerGenServiceCollectionExtensions.<>c.<AddSwaggerGen>b__0_1(IServiceProvider s)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.GetService(IServiceProvider sp, Type type, Type middleware)
+   at lambda_method4(Closure , Object , HttpContext , IServiceProvider )
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_1.<UseMiddleware>b__2(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-03-27 16:48:14.404 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/favicon.ico - - - 500 - text/plain;+charset=utf-8 36.6971ms
+2023-03-27 16:48:32.481 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:32770/api/v1/employees - -
+2023-03-27 16:48:32.514 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+System.UriFormatException: Invalid URI: The format of the URI could not be determined.
+   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind, UriCreationOptions& creationOptions)
+   at System.Uri..ctor(String uriString)
+   at EmployeesAPI.Presentation.ConfigureSwaggerOptions.Configure(SwaggerGenOptions options) in E:\Training\C#\Speed5\EmployeesAPI\EmployeesAPI\Presentation\ConfigureSwaggerOptions.cs:line 21
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Swashbuckle.AspNetCore.SwaggerGen.ConfigureSwaggerGeneratorOptions..ctor(IOptions`1 swaggerGenOptionsAccessor, IServiceProvider serviceProvider, IWebHostEnvironment hostingEnv)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitNoCache(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.SwaggerGenServiceCollectionExtensions.<>c.<AddSwaggerGen>b__0_1(IServiceProvider s)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.GetService(IServiceProvider sp, Type type, Type middleware)
+   at lambda_method4(Closure , Object , HttpContext , IServiceProvider )
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_1.<UseMiddleware>b__2(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-03-27 16:48:32.517 +00:00 [INF] Request finished HTTP/1.1 GET https://localhost:32770/api/v1/employees - - - 500 - text/plain;+charset=utf-8 36.6460ms
+2023-03-27 16:54:08.753 +00:00 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-03-27 16:54:08.870 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2023-03-27 16:54:08.871 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-03-27 16:54:09.152 +00:00 [INF] 'Configure' step is done! Ready to go!
+2023-03-27 16:54:09.388 +00:00 [INF] Now listening on: https://[::]:443
+2023-03-27 16:54:09.389 +00:00 [INF] Now listening on: http://[::]:80
+2023-03-27 16:54:09.394 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-27 16:54:09.394 +00:00 [INF] Hosting environment: Development
+2023-03-27 16:54:09.395 +00:00 [INF] Content root path: /app
+2023-03-27 16:54:35.257 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger - -
+2023-03-27 16:54:35.377 +00:00 [INF] HTTP GET /swagger responded 404 in 37.0817 ms
+2023-03-27 16:54:35.392 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger - - - 404 0 - 140.1367ms
+2023-03-27 16:54:41.005 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:32770/api/v1/employees - -
+2023-03-27 16:54:41.020 +00:00 [INF] Executing endpoint 'EmployeesAPI.Presentation.Controllers.V1.EmployeesController.GetAllEmployees (EmployeesAPI)'
+2023-03-27 16:54:41.049 +00:00 [INF] Route matched with {action = "GetAllEmployees", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EmployeesAPI.Core.Queries.GetList.EmployeelistVm]] GetAllEmployees() on controller EmployeesAPI.Presentation.Controllers.V1.EmployeesController (EmployeesAPI).
+2023-03-27 16:54:41.190 +00:00 [INF] Получение всех сотрудников...
+2023-03-27 16:54:41.748 +00:00 [INF] Executed DbCommand (11ms) [Parameters=[@__request_EmployeeId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "e"."Id" AS "EmployeeId", "e"."ФИО сотрудника" AS "FullName", "e"."Должность" AS "Position"
+FROM "Employees" AS "e"
+WHERE "e"."Id" = @__request_EmployeeId_0
+2023-03-27 16:54:41.780 +00:00 [INF] Executing OkObjectResult, writing value of type 'EmployeesAPI.Core.Queries.GetList.EmployeelistVm'.
+2023-03-27 16:54:41.923 +00:00 [INF] Executed action EmployeesAPI.Presentation.Controllers.V1.EmployeesController.GetAllEmployees (EmployeesAPI) in 866.7108ms
+2023-03-27 16:54:41.924 +00:00 [INF] Executed endpoint 'EmployeesAPI.Presentation.Controllers.V1.EmployeesController.GetAllEmployees (EmployeesAPI)'
+2023-03-27 16:54:41.925 +00:00 [INF] HTTP GET /api/v1/employees responded 200 in 918.3993 ms
+2023-03-27 16:54:41.937 +00:00 [INF] Request finished HTTP/1.1 GET https://localhost:32770/api/v1/employees - - - 200 - application/json;+charset=utf-8;+x-api-version=1 932.3363ms
+2023-03-27 17:01:16.058 +00:00 [INF] Executed DbCommand (61ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-03-27 17:01:16.202 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2023-03-27 17:01:16.202 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-03-27 17:01:16.538 +00:00 [INF] 'Configure' step is done! Ready to go!
+2023-03-27 17:01:16.844 +00:00 [INF] Now listening on: https://[::]:443
+2023-03-27 17:01:16.845 +00:00 [INF] Now listening on: http://[::]:80
+2023-03-27 17:01:16.852 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-27 17:01:16.852 +00:00 [INF] Hosting environment: Development
+2023-03-27 17:01:16.853 +00:00 [INF] Content root path: /app
+2023-03-27 17:01:42.020 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger - -
+2023-03-27 17:01:42.118 +00:00 [INF] HTTP GET /swagger responded 404 in 33.2011 ms
+2023-03-27 17:01:42.133 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger - - - 404 0 - 121.9496ms
+2023-03-27 17:01:44.918 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:32770/api/v1/employees - -
+2023-03-27 17:01:44.931 +00:00 [INF] Executing endpoint 'EmployeesAPI.Presentation.Controllers.V1.EmployeesController.GetAllEmployees (EmployeesAPI)'
+2023-03-27 17:01:44.975 +00:00 [INF] Route matched with {action = "GetAllEmployees", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EmployeesAPI.Core.Queries.GetList.EmployeelistVm]] GetAllEmployees() on controller EmployeesAPI.Presentation.Controllers.V1.EmployeesController (EmployeesAPI).
+2023-03-27 17:01:45.181 +00:00 [INF] Получение всех сотрудников...
+2023-03-27 17:01:45.780 +00:00 [INF] Executed DbCommand (11ms) [Parameters=[@__request_EmployeeId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "e"."Id" AS "EmployeeId", "e"."ФИО сотрудника" AS "FullName", "e"."Должность" AS "Position"
+FROM "Employees" AS "e"
+WHERE "e"."Id" = @__request_EmployeeId_0
+2023-03-27 17:01:45.812 +00:00 [INF] Executing OkObjectResult, writing value of type 'EmployeesAPI.Core.Queries.GetList.EmployeelistVm'.
+2023-03-27 17:01:45.957 +00:00 [INF] Executed action EmployeesAPI.Presentation.Controllers.V1.EmployeesController.GetAllEmployees (EmployeesAPI) in 975.3413ms
+2023-03-27 17:01:45.958 +00:00 [INF] Executed endpoint 'EmployeesAPI.Presentation.Controllers.V1.EmployeesController.GetAllEmployees (EmployeesAPI)'
+2023-03-27 17:01:45.959 +00:00 [INF] HTTP GET /api/v1/employees responded 200 in 1040.0338 ms
+2023-03-27 17:01:45.975 +00:00 [INF] Request finished HTTP/1.1 GET https://localhost:32770/api/v1/employees - - - 200 - application/json;+charset=utf-8;+x-api-version=1 1057.3172ms
+2023-03-27 17:14:06.811 +00:00 [INF] Executed DbCommand (77ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2023-03-27 17:14:07.059 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Employees" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Employees" PRIMARY KEY,
+    "ФИО сотрудника" TEXT NOT NULL,
+    "Должность" TEXT NOT NULL,
+    "Дата создания" TEXT NOT NULL,
+    "Дата изменения" TEXT NOT NULL
+);
+2023-03-27 17:14:07.067 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Employees_Id" ON "Employees" ("Id");
+2023-03-27 17:14:07.163 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2023-03-27 17:14:07.164 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-03-27 17:14:07.445 +00:00 [INF] 'Configure' step is done! Ready to go!
+2023-03-27 17:14:07.703 +00:00 [INF] Now listening on: https://[::]:443
+2023-03-27 17:14:07.703 +00:00 [INF] Now listening on: http://[::]:80
+2023-03-27 17:14:07.708 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-27 17:14:07.709 +00:00 [INF] Hosting environment: Development
+2023-03-27 17:14:07.709 +00:00 [INF] Content root path: /app
+2023-03-27 17:14:33.327 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32770/swagger - -
+2023-03-27 17:14:33.452 +00:00 [INF] HTTP GET /swagger responded 404 in 50.7877 ms
+2023-03-27 17:14:33.471 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32770/swagger - - - 404 0 - 154.4454ms
+2023-03-27 17:14:35.759 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:32770/api/v1/employees - -
+2023-03-27 17:14:35.773 +00:00 [INF] Executing endpoint 'EmployeesAPI.Presentation.Controllers.V1.EmployeesController.GetAllEmployees (EmployeesAPI)'
+2023-03-27 17:14:35.794 +00:00 [INF] Route matched with {action = "GetAllEmployees", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[EmployeesAPI.Core.Queries.GetList.EmployeelistVm]] GetAllEmployees() on controller EmployeesAPI.Presentation.Controllers.V1.EmployeesController (EmployeesAPI).
+2023-03-27 17:14:35.926 +00:00 [INF] Получение всех сотрудников...
+2023-03-27 17:14:36.554 +00:00 [INF] Executed DbCommand (11ms) [Parameters=[@__request_EmployeeId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "e"."Id" AS "EmployeeId", "e"."ФИО сотрудника" AS "FullName", "e"."Должность" AS "Position"
+FROM "Employees" AS "e"
+WHERE "e"."Id" = @__request_EmployeeId_0
+2023-03-27 17:14:36.586 +00:00 [INF] Executing OkObjectResult, writing value of type 'EmployeesAPI.Core.Queries.GetList.EmployeelistVm'.
+2023-03-27 17:14:36.730 +00:00 [INF] Executed action EmployeesAPI.Presentation.Controllers.V1.EmployeesController.GetAllEmployees (EmployeesAPI) in 930.0149ms
+2023-03-27 17:14:36.732 +00:00 [INF] Executed endpoint 'EmployeesAPI.Presentation.Controllers.V1.EmployeesController.GetAllEmployees (EmployeesAPI)'
+2023-03-27 17:14:36.732 +00:00 [INF] HTTP GET /api/v1/employees responded 200 in 971.8589 ms
+2023-03-27 17:14:36.745 +00:00 [INF] Request finished HTTP/1.1 GET https://localhost:32770/api/v1/employees - - - 200 - application/json;+charset=utf-8;+x-api-version=1 985.5789ms
