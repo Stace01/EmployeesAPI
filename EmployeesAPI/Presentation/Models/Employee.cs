@@ -1,4 +1,6 @@
-﻿namespace EmployeesAPI.Presentation.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace EmployeesAPI.Presentation.Models
 {
     public class Employee : BaseEntity
     {

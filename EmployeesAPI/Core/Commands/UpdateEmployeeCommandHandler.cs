@@ -24,7 +24,7 @@ namespace EmployeesAPI.Core.Commands
                 throw new NotFoundException(nameof(Employee), request.FullName);
             }
 
-            entity.FullName = request.FullName;
+            //entity.FullName = request.FullName;
             entity.Position = request.Position;
             entity.UpdatedDateTime = DateTime.UtcNow;
 

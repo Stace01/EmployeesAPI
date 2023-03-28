@@ -93,7 +93,7 @@ namespace EmployeesAPI.Presentation.Controllers.V1
 
             try
             {
-                command.FullName = employeeDTO.FullName;
+                //command.FullName = employeeDTO.FullName;
                 command.Position = employeeDTO.Position;
                 await Mediator.Send(command);
             }
